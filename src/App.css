@@ -2,6 +2,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #21252b;
+  color: white;
+}
+a {
+  color: #999999
 }
 #root,
 .App {
@@ -27,4 +31,10 @@ body {
 
 .App-main {
   padding: 50px;
+}
+
+footer {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 80%;
 }

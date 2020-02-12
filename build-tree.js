@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const CUTOFF = 15;
+const CUTOFF = 10;
 const MAX_DEPTH = 4;
 
 function main(rootDir) {
@@ -54,19 +54,18 @@ function getChildren(root, toggleByDefault, depth = 0) {
       if (subChildren.length) {
         subChildren.sort((a, b) => b.count - a.count);
         if (subChildren.length > CUTOFF) {
+          const totalSum = subChildren.reduce((a, b) => a + b.count, 0);
           const rest = subChildren.splice(CUTOFF, subChildren.length);
           const combinedSum = rest.reduce((a, b) => a + b.count, 0);
+          const p = (100 * combinedSum) / totalSum;
           const combined = {
-            name: `*REST* (${combinedSum.toLocaleString()} files`,
+            name: `*REST* (${combinedSum.toLocaleString()} files ${p.toFixed(
+              1
+            )}%)`,
             count: combinedSum
           };
           subChildren.push(combined);
         }
-        // const totalSum = subChildren.reduce((a, b) => a + b.count, 0);
-        // subChildren.forEach(c => {
-        //   const p = (100 * c.count) / totalSum;
-        //   c.name = `${c.name} ${p.toFixed(1)}%)`;
-        // });
         child.children = subChildren;
       }
       children.push(child);
