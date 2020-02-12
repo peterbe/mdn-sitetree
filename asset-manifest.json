@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mdn-sitetree/static/css/main.22726399.chunk.css",
+    "main.js": "/mdn-sitetree/static/js/main.a4f4bea3.chunk.js",
+    "main.js.map": "/mdn-sitetree/static/js/main.a4f4bea3.chunk.js.map",
+    "runtime-main.js": "/mdn-sitetree/static/js/runtime-main.a22e29bc.js",
+    "runtime-main.js.map": "/mdn-sitetree/static/js/runtime-main.a22e29bc.js.map",
+    "static/js/2.449cdb74.chunk.js": "/mdn-sitetree/static/js/2.449cdb74.chunk.js",
+    "static/js/2.449cdb74.chunk.js.map": "/mdn-sitetree/static/js/2.449cdb74.chunk.js.map",
+    "index.html": "/mdn-sitetree/index.html",
+    "precache-manifest.7df14c5fe5e463d81886e5c767290350.js": "/mdn-sitetree/precache-manifest.7df14c5fe5e463d81886e5c767290350.js",
+    "service-worker.js": "/mdn-sitetree/service-worker.js",
+    "static/css/main.22726399.chunk.css.map": "/mdn-sitetree/static/css/main.22726399.chunk.css.map",
+    "static/js/2.449cdb74.chunk.js.LICENSE.txt": "/mdn-sitetree/static/js/2.449cdb74.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a22e29bc.js",
+    "static/js/2.449cdb74.chunk.js",
+    "static/css/main.22726399.chunk.css",
+    "static/js/main.a4f4bea3.chunk.js"
+  ]
+}
