@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "http://peterbe.github.io/mdn-sitetree",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@testing-library/user-event": "^8.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1",
@@ -37,5 +37,7 @@
   },
   "devDependencies": {
     "gh-pages": "2.2.0"
+  },"resolutions": {
+    "@hapi/hoek": ">=8.5.1"
   }
 }
