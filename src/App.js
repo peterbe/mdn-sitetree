@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">MDN SiteTree</header>
 
-      <section classname="App-main">
+      <section className="App-main">
         <SiteTree />
       </section>
     </div>

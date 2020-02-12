@@ -1,37 +1,45 @@
-import React from "react";
-import Tree from "react-d3-tree";
+import React, { useState, useEffect } from "react";
+import { Treebeard } from "react-treebeard";
 
 import "./SiteTree.css";
 
-const myTreeData = [
-  {
-    name: "Top Level",
-    attributes: {
-      keyA: "val A",
-      keyB: "val B",
-      keyC: "val C"
-    },
-    children: [
-      {
-        name: "Level 2: A",
-        attributes: {
-          keyA: "val A",
-          keyB: "val B",
-          keyC: "val C"
-        }
-      },
-      {
-        name: "Level 2: B"
-      }
-    ]
-  }
-];
-
 export default function SiteTree() {
-  /* <Tree /> will fill width/height of its container; in this case `#treeWrapper` */
+  const [data, setData] = useState({});
+  const [cursor, setCursor] = useState(false);
+
+  useEffect(() => {
+    let dismounted = false;
+    fetch("tree.json").then(r => {
+      if (!r.ok) {
+        console.log(r);
+        throw new Error("Not ok");
+      }
+      if (!r.headers.get("content-type").includes("application/json")) {
+        throw new Error(`not json ${r.headers.get("content-type")}`);
+      }
+      r.json().then(d => {
+        if (!dismounted) setData(d);
+      });
+    });
+    return () => {
+      dismounted = true;
+    };
+  }, []);
+
+  function onToggle(node, toggled) {
+    if (cursor) {
+      cursor.active = false;
+    }
+    node.active = true;
+    if (node.children) {
+      node.toggled = toggled;
+    }
+    setCursor(node);
+    setData(Object.assign({}, data));
+  }
   return (
-    <div id="tree-wrapper">
-      <Tree data={myTreeData} orientation="horizontal" />
+    <div id="wrapper">
+      <Treebeard data={data} onToggle={onToggle} />
     </div>
   );
 }
