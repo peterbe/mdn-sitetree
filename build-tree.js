@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const CUTOFF = 10;
+const CUTOFF = 20;
 const MAX_DEPTH = 4;
 
 function main(rootDir) {
