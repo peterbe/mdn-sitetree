@@ -36,8 +36,10 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "2.2.0"
-  },"resolutions": {
+    "gh-pages": "2.2.0",
+    "yargs": "15.1.0"
+  },
+  "resolutions": {
     "@hapi/hoek": ">=8.5.1"
   }
 }
