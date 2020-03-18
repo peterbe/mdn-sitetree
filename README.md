@@ -15,5 +15,5 @@ open http://localhost:3000
 You need a Yari checkout of all content. E.g.
 
 ```bash
-node build-tree.js ~/yari/content/files
+python build-tree.py ~/yari/content/files
 ```
