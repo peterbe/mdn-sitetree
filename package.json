@@ -40,6 +40,8 @@
     "yargs": "15.1.0"
   },
   "resolutions": {
-    "@hapi/hoek": ">=8.5.1"
+    "@hapi/hoek": ">=8.5.1",
+    "acorn": ">=5.7.4",
+    "minimist": ">=1.2.3"
   }
 }
